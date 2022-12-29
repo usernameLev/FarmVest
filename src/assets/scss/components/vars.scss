@@ -1,0 +1,43 @@
+// Font-family
+$fontFamily: 'League Spartan';
+
+// Font-size
+$fontSize: rem(18);
+$secondaryFontSize: 24px;
+
+// Line-height
+$mainLineHeight: 21px;
+$secondaryLineHeight: 24px;
+
+// Font-weight
+$mainFontWeight: 500;
+$secondaryFontWeight: 600;
+$thirdFontWeight: 700;
+
+// Color
+$mainColor: #ffffff;
+$secondColor: #23b123;
+$thirdColor: #1b2327;
+
+// Width
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1620;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$breakPoint1230: 1230px;
+$breakPoint1092: 1092px;
+$breakPoint992: 991.98px;
+$breakPoint768: 767.98px;
+$breakPoint600: 600px;
+$breakPoint560: 560px;
+$breakPoint480: 479.98px;
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+$responsiveType: 1;
