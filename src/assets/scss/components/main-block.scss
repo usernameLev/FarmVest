@@ -14,8 +14,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    @include adaptiveValue('padding-top', 250, 130, 1);
-    @include adaptiveValue('padding-bottom', 200, 30, 1);
+    @include adaptiveValue('padding-top', 250, 100, 1);
+    @include adaptiveValue('padding-bottom', 200, 60, 1);
   }
 
   &__title {
@@ -27,7 +27,6 @@
   }
 
   &__text {
-    line-height: 180%;
     max-width: rem(570);
 
     &:not(:last-child) {
@@ -107,7 +106,7 @@
     }
 
     &_2 {
-      top: prc(380, 974);
+      top: prc(420, 974);
       left: prc(237, 1620);
     }
 
@@ -140,7 +139,7 @@
   &__circle {
     position: absolute;
     border-radius: 50%;
-    border: 1px solid #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.37);
     @include adaptiveValue('width', 585, 350, 1);
     @include adaptiveValue('height', 585, 350, 1);
     pointer-events: none;
@@ -148,11 +147,11 @@
     left: 0;
 
     &_1 {
-      transform: translate(calc(-50% - rem(28)), -50%);
+      transform: translate(calc(-50% - rem(28)), -27%);
     }
 
     &_2 {
-      transform: translate(calc(-50% + rem(27)), calc(-50% - rem(40)));
+      transform: translate(calc(-50% + rem(27)), -36%);
     }
   }
 }

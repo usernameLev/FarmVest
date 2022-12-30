@@ -1,0 +1,31 @@
+.page {
+  &__partners {
+  }
+}
+
+.partners {
+  @include adaptiveValue('padding-bottom', 200, 60, 1);
+
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: rem(100);
+    @include adaptiveValue('row-gap', 60, 40, 1);
+    padding: 0 rem(15);
+
+    @media (max-width: em(1100)) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    img {
+      max-width: 100%;
+    }
+  }
+}

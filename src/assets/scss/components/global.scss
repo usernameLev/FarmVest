@@ -12,6 +12,7 @@ body {
   font-family: Lato;
   font-weight: $mainFontWeight;
   line-height: math.div(22, 18);
+  text-align: center;
   background-color: $secondColor;
   border-radius: rem(10);
   padding: rem(21) rem(25);
@@ -112,13 +113,24 @@ body {
 
 // TODO Title
 .title {
-  font-size: rem(70);
   line-height: math.div(65, 70);
   font-weight: $secondaryFontWeight;
   color: $mainColor;
   @include adaptiveValue('font-size', 70, 45, 1);
 
+  &_s64 {
+    @include adaptiveValue('font-size', 64, 40, 1);
+  }
+
+  &_s56 {
+    @include adaptiveValue('font-size', 56, 35, 1);
+  }
+
   span {
     color: $secondColor;
   }
+}
+
+.text {
+  line-height: 180%;
 }

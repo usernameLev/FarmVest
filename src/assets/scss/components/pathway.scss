@@ -1,0 +1,130 @@
+.page {
+  &__pathway {
+  }
+}
+
+.pathway {
+  @include adaptiveValue('padding-top', 100, 60, 1);
+  @include adaptiveValue('padding-bottom', 100, 60, 1);
+
+  &__container {
+    display: flex;
+    row-gap: rem(30);
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    flex: 0 0 prc(694, 1420);
+    margin-left: auto;
+    margin-right: auto;
+
+    &.image-block {
+      &::before,
+      &::after {
+        border: none;
+      }
+    }
+    &.image-block .image-block__item {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+        @include adaptiveValue('width', 585, 350, 1);
+        @include adaptiveValue('height', 585, 350, 1);
+      }
+
+      &::before {
+        transform: translate(-53%, 33%);
+      }
+
+      &::after {
+        transform: translate(-47%, 43%);
+      }
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    @include adaptiveValue('padding-left', 126, 30, 1);
+
+    @media (max-width: $tablet) {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 30, 20, 1);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 48, 30, 1);
+    }
+  }
+
+  &__spollers {
+    display: grid;
+    gap: rem(24);
+  }
+}
+
+.spollers-pathway {
+  &__item {
+    border-radius: rem(10);
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include adaptiveValue('font-size', 24, 18, 1);
+    line-height: 177%;
+    text-align: left;
+    background-color: transparent;
+    gap: rem(10);
+    padding: rem(24) rem(30);
+
+    &::after {
+      content: '';
+      background: url('../img/main/pathway/icons/01.svg') center / 100%
+        no-repeat;
+      flex: 0 0 rem(24);
+      height: rem(24);
+      transition: all 0.3s ease 0s;
+    }
+
+    &._spoller-active {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      line-height: 130%;
+      padding: rem(18) rem(20);
+    }
+  }
+
+  &__body {
+    padding: rem(0) rem(30) rem(24) rem(30);
+
+    @media (max-width: $mobileSmall) {
+      padding: rem(0) rem(20) rem(18) rem(20);
+    }
+  }
+}

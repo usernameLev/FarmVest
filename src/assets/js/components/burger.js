@@ -1,26 +1,3 @@
-// function menuInit() {
-//   if (document.querySelector('.icon-menu')) {
-//     document.addEventListener('click', function (e) {
-//       if (bodyLockStatus && e.target.closest('.icon-menu')) {
-//         bodyLockToggle();
-//         document.documentElement.classList.toggle('menu-open');
-//       }
-//     });
-//   }
-// }
-
-// function menuOpen() {
-//   bodyLock();
-//   document.documentElement.classList.add('menu-open');
-// }
-
-// function menuClose() {
-//   bodyUnlock();
-//   document.documentElement.classList.remove('menu-open');
-// }
-
-// menuInit();
-
 const iconMenu = document.querySelector('.icon-menu');
 const menuBody = document.querySelector('.menu__body');
 

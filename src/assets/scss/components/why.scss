@@ -1,0 +1,87 @@
+@use 'sass:math';
+
+.page {
+  &__why {
+  }
+}
+.why {
+  @include adaptiveValue('padding-bottom', 100, 60, 1);
+
+  &__container {
+    display: grid;
+    row-gap: rem(30);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr prc(680, 1420);
+    }
+  }
+
+  &__content {
+    @include adaptiveValue('padding-right', 177, 30, 1);
+
+    @media (max-width: $tablet) {
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 30, 20, 1);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 48, 30, 1);
+    }
+  }
+
+  &__steps {
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 55, 30, 1);
+    }
+  }
+
+  &__button {
+    min-width: rem(222);
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    padding: 0;
+  }
+}
+
+.steps-why {
+  display: grid;
+  counter-reset: item;
+  @include adaptiveValue('gap', 48, 20, 1);
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    font-size: rem(20);
+    line-height: math.div(55, 20);
+    @include adaptiveValue('gap', 50, 20, 1);
+
+    &::before {
+      content: counter(item);
+      counter-increment: item;
+      width: rem(64);
+      height: rem(64);
+      font-size: rem(36);
+      font-weight: $secondaryFontWeight;
+      line-height: rem(70);
+      text-align: center;
+      background-color: rgb(15, 15, 15, 0.5);
+      border-radius: 50%;
+    }
+  }
+}
