@@ -527,18 +527,18 @@ body {
         top: calc(50% - 0.0625rem);
     }
 
-    .menu-open .icon-menu span {
+    .icon-menu._active span {
         width: 0;
     }
 
-    .menu-open .icon-menu::before {
+    .icon-menu._active::before {
         top: calc(50% - 0.0625rem);
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
     }
 
-    .menu-open .icon-menu::after {
+    .icon-menu._active::after {
         bottom: calc(50% - 0.0625rem);
-        transform: rorate(45deg);
+        transform: rotate(-45deg);
     }
 }
 
