@@ -89,23 +89,19 @@ body {
       top: calc(50% - rem(1));
     }
 
-    .menu-open & {
+    &._active {
       span {
         width: 0;
       }
 
-      &::before,
-      &::after {
-      }
-
       &::before {
         top: calc(50% - rem(1));
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
       }
 
       &::after {
         bottom: calc(50% - rem(1));
-        transform: rorate(45deg);
+        transform: rotate(-45deg); // :-)
       }
     }
   }
